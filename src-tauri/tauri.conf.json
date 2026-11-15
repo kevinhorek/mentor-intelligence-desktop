@@ -1,0 +1,48 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Mentor Intelligence",
+  "mainBinaryName": "mentor-intelligence",
+  "version": "1.0.0",
+  "identifier": "com.mentorintell.desktop",
+  "build": {
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [],
+    "withGlobalTauri": false,
+    "security": {
+      "csp": "default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data:; connect-src https://www.mentorintell.com",
+      "capabilities": ["local-shell"]
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["msi", "nsis", "deb", "appimage", "rpm", "app", "dmg"],
+    "publisher": "Mentor Intelligence",
+    "homepage": "https://www.mentorintell.com",
+    "category": "Business",
+    "shortDescription": "Mentor Intelligence for venture mentoring chapters",
+    "longDescription": "The Mentor Intelligence desktop app. It opens www.mentorintell.com in its own window so chapter teams can work without a browser tab.",
+    "copyright": "Mentor Intelligence",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "windows": {
+      "webviewInstallMode": { "type": "embedBootstrapper" },
+      "wix": { "language": "en-US" },
+      "nsis": { "installMode": "currentUser", "languages": ["English"] }
+    },
+    "linux": {
+      "deb": { "section": "office" },
+      "rpm": { "release": "1" }
+    },
+    "macOS": {
+      "minimumSystemVersion": "11.0"
+    }
+  },
+  "plugins": {}
+}

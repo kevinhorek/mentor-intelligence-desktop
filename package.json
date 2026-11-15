@@ -1,0 +1,15 @@
+{
+  "name": "mi-desktop",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Mentor Intelligence desktop app for Windows, Linux and macOS (Tauri 2 shell around www.mentorintell.com)",
+  "scripts": {
+    "tauri": "tauri",
+    "dev": "tauri dev",
+    "build": "tauri build",
+    "icons": "tauri icon src-tauri/app-icon.png"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2"
+  }
+}
